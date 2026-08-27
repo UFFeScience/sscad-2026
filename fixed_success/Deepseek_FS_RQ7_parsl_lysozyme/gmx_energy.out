@@ -1,0 +1,14 @@
+
+Statistics over 556 steps [ 0.0000 through 555.0000 ps ], 1 data sets
+All statistics are over 440 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                   -634424      12000    28844.3   -79415.2  (kJ/mol)
+
+Statistics over 279 steps [ 0.0000 through 278.0000 ps ], 1 data sets
+All statistics are over 221 points (frames)
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                   -617738      14000    32152.6   -90681.4  (kJ/mol)

@@ -1,0 +1,1 @@
+Escreva um script em utilizando o sistema de Workflow Nextflow para gerar workflows responsáveis por calcular os algoritmos KMeans, Matmul e Lysozyme separadamente. A aplicação Lysozyme precisa do gmx e gmx_mpi do GROMACS com a topologia pdb2gmx.

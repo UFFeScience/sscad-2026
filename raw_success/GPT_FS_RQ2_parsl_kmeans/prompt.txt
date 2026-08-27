@@ -1,0 +1,184 @@
+Escreva um script em utilizando a biblioteca Parsl para gerar workflows responsáveis por calcular os algoritmos KMeans, Matmul e Lysozyme separadamente. A aplicação Lysozyme precisa do gmx e gmx_mpi do GROMACS com a topologia pdb2gmx. A seguir um exemplo de um workflow com operações matemáticas e demonstrações de outras funcionalidades.
+
+#!/usr/bin/env python3
+import os
+os.makedirs('output', exist_ok=True)
+
+def example_1():
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from parsl.configs.local_threads import config
+    parsl.load(config)
+
+    @bash_app
+    def mysim(stdout=('output/p1.out', 'w'), stderr=('output/p1.err', 'w')):
+        return 'app/simulate'
+    mysim().result()
+    with open('output/p1.out', 'r') as f:
+        print(f.read())
+    parsl.clear()
+
+def example_2():
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from parsl.configs.local_threads import config
+    parsl.load(config)
+
+    @python_app
+    def mysim():
+        from random import randint
+        'Generate a random integer and return it'
+        return randint(1, 100)
+    print(mysim().result())
+    parsl.clear()
+
+def example_3():
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from parsl.configs.local_threads import config
+    from parsl.data_provider.files import File
+    parsl.load(config)
+
+    @bash_app
+    def mysim(outputs, stdout=('output/p3.out', 'w'), stderr=('output/p3.err', 'w')):
+        return 'app/simulate > {0}'.format(outputs[0].filepath)
+    results = []
+    for i in range(5):
+        out_file = 'output/p3_sim_{0}'.format(i)
+        results.append(mysim(outputs=[File(out_file)]))
+    print('Job Status: {}'.format([r.done() for r in results]))
+    [r.result() for r in results]
+    print('Job Status: {}'.format([r.done() for r in results]))
+    outputs = [r.outputs[0] for r in results]
+    for o in outputs:
+        with open(o.filename, 'r') as f:
+            print(f.read().strip())
+    parsl.clear()
+
+def example_4():
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from parsl.configs.local_threads import config
+    from parsl.data_provider.files import File
+    parsl.load(config)
+
+    @bash_app
+    def mysim(outputs, stdout=('output/p4_sim.out', 'w'), stderr=('output/p4_sim.err', 'w')):
+        return 'app/simulate > {0}'.format(outputs[0].filepath)
+
+    @bash_app
+    def stats(inputs, outputs, stderr=('output/p4_stats.err', 'w'), stdout=('output/p4_stats.out', 'w')):
+        return 'app/stats {0} > {1}'.format(' '.join((i.filepath for i in inputs)), outputs[0].filepath)
+    results = []
+    for i in range(5):
+        out_file = 'output/p4_sim_{0}'.format(i)
+        results.append(mysim(outputs=[File(out_file)]))
+    sim_outputs = [r.outputs[0] for r in results]
+    s = stats(inputs=sim_outputs, outputs=[File('output/p4_stats.txt')])
+    s.result()
+    with open('output/p4_stats.txt', 'r') as f:
+        print(f.read())
+    parsl.clear()
+
+def example_5a():
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from parsl.configs.local_threads import config
+    from parsl.data_provider.files import File
+    parsl.load(config)
+
+    @bash_app
+    def sort_app(unsorted, outputs):
+        return 'sort -g {} > {}'.format(unsorted.filepath, outputs[0].filepath)
+    s = sort_app(File('input/unsorted.txt'), outputs=[File('output/a_sorted.txt')])
+    output_file = s.outputs[0].result()
+    print('Contents of the unsorted.txt file:')
+    with open('input/unsorted.txt', 'r') as f:
+        print(f.read().replace('\n', ','))
+    print('\nContents of the sorted output file:')
+    with open(output_file, 'r') as f:
+        print(f.read().replace('\n', ','))
+    parsl.clear()
+
+def example_5b():
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from parsl.configs.htex_local import config
+    from parsl.data_provider.files import File
+    parsl.load(config)
+
+    @bash_app
+    def sort_app(unsorted, outputs):
+        return 'sort -g {} > {}'.format(unsorted.filepath, outputs[0].filepath)
+    s = sort_app(File('input/unsorted.txt'), outputs=[File('output/b_sorted.txt')])
+    output_file = s.outputs[0].result()
+    print('Contents of the unsorted.txt file:')
+    with open('input/unsorted.txt', 'r') as f:
+        print(f.read().replace('\n', ','))
+    print('\nContents of the sorted output file:')
+    with open(output_file, 'r') as f:
+        print(f.read().replace('\n', ','))
+    parsl.clear()
+
+def example_5c():
+    import os
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from parsl.data_provider.files import File
+    from parsl.config import Config
+    from parsl.channels import LocalChannel
+    from parsl.providers import SlurmProvider
+    from parsl.executors import HighThroughputExecutor
+    from parsl.launchers import SrunLauncher
+    from parsl.addresses import address_by_hostname
+    config = Config(executors=[HighThroughputExecutor(label='frontera_htex', address=address_by_hostname(), max_workers=56, provider=SlurmProvider(cmd_timeout=60, channel=LocalChannel(), nodes_per_block=1, partition='development', scheduler_options='#SBATCH -A ALLOCATION', worker_init='conda activate CONDA_ENV', walltime='00:10:00', launcher=SrunLauncher()))])
+    parsl.load(config)
+
+    @bash_app
+    def sort_app(unsorted, outputs):
+        return 'sleep 30; sort -g {} > {}'.format(unsorted.filepath, outputs[0].filepath)
+    s = sort_app(File(os.path.abspath('input/unsorted.txt')), outputs=[File(os.path.abspath('output/sorted_c.txt'))])
+    output_file = s.outputs[0].result()
+    print('Contents of the unsorted.txt file:')
+    with open('input/unsorted.txt', 'r') as f:
+        print(f.read().replace('\n', ','))
+    print('\nContents of the sorted output file:')
+    with open(output_file, 'r') as f:
+        print(f.read().replace('\n', ','))
+    parsl.clear()
+
+def example_6():
+    import os
+    import parsl
+    from parsl.app.app import python_app, bash_app
+    from config.midway import config
+    parsl.load(config)
+    remote = False
+    shared_dir = 'SHARED_DIRECTORY'
+
+    @bash_app
+    def compile_app(dirpath, stdout=None, stderr=None, compiler='mpicc'):
+        return 'cd {0}; make clean; make CC={1} '.format(dirpath, compiler)
+
+    @bash_app
+    def mpi_hello(dirpath, launcher='mpirun', app='mpi_hello', nproc=20, outputs=[]):
+        import os
+        if launcher == 'mpirun':
+            return 'mpirun -np {} {} &> {};'.format(nproc, os.path.join(dirpath, app), outputs[0])
+        elif launcher == 'srun':
+            return 'srun -n {} ./{} &> {};'.format(nproc, os.path.join(dirpath, app), outputs[0])
+    compile_app(dirpath=os.path.join(shared_dir, 'mpi_apps'), stdout=os.path.join(shared_dir, 'mpi_apps.compile.out'), stderr=os.path.join(shared_dir, 'mpi_apps.compile.err'), compiler='mpicc').result()
+    hello = mpi_hello(os.path.join(shared_dir, 'mpi_apps'), launcher='mpirun', outputs=[os.path.join(shared_dir, 'mpi_apps', 'hello.txt')])
+    output_file = hello.outputs[0].result()
+    if remote:
+        dfk.executor.execution_provider.channel.pull_file(output_file, '.')
+    with open(output_file, 'r') as f:
+        print(f.read())
+    parsl.clear()
+if __name__ == '__main__':
+    example_1()
+    example_2()
+    example_3()
+    example_4()
+    example_5a()
+    example_5b()

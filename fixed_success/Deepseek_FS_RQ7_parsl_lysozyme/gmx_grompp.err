@@ -1,0 +1,106 @@
+--> executable follows <--
+gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/ions.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_ions.tpr -maxwarn 2
+--> end executable <--
+                 :-) GROMACS - gmx grompp, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/ions.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_ions.tpr -maxwarn 2
+
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 0.5
+
+NOTE 1 [file lysozyme.top, line 18410]:
+  System has non-zero total charge: 8.000000
+  Total charge should normally be an integer. See
+  https://manual.gromacs.org/current/user-guide/floating-point.html
+  for discussion on how close it should be to an integer.
+
+
+
+Number of degrees of freedom in T-Coupling group rest is 78741.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 2 [file /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/ions.mdp]:
+  You are using a plain Coulomb cut-off, which might produce artifacts.
+  You might want to consider using PME electrostatics.
+
+
+
+There were 2 NOTEs
+
+GROMACS reminds you: "Youth is wasted on the young" (The Smashing Pumpkins)
+
+--> executable follows <--
+gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/minim.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_em.tpr -maxwarn 2
+--> end executable <--
+                 :-) GROMACS - gmx grompp, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/minim.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_em.tpr -maxwarn 2
+
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 78717.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+GROMACS reminds you: "Youth is wasted on the young" (The Smashing Pumpkins)
+
+--> executable follows <--
+gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/ions.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_ions.tpr -maxwarn 2
+--> end executable <--
+                 :-) GROMACS - gmx grompp, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/ions.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_ions.tpr -maxwarn 2
+
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 0.5
+
+NOTE 1 [file 1AKI.top, line 18410]:
+  System has non-zero total charge: 8.000000
+  Total charge should normally be an integer. See
+  https://manual.gromacs.org/current/user-guide/floating-point.html
+  for discussion on how close it should be to an integer.
+
+
+
+Number of degrees of freedom in T-Coupling group rest is 78741.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 2 [file /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/ions.mdp]:
+  You are using a plain Coulomb cut-off, which might produce artifacts.
+  You might want to consider using PME electrostatics.
+
+
+
+There were 2 NOTEs
+
+GROMACS reminds you: "Hey, it's me - Pandora. Welcome to my new unboxing video!" (Anonymous)
+
+--> executable follows <--
+gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/minim.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_em.tpr -maxwarn 2
+--> end executable <--
+                 :-) GROMACS - gmx grompp, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx grompp -f /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/minim.mdp -c /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_em.tpr -maxwarn 2
+
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 78717.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+GROMACS reminds you: "Hey, it's me - Pandora. Welcome to my new unboxing video!" (Anonymous)
+

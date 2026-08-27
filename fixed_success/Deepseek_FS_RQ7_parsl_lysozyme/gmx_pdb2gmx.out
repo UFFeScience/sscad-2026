@@ -1,0 +1,196 @@
+Using the Oplsaa force field in directory oplsaa.ff
+
+going to rename oplsaa.ff/aminoacids.r2b
+Reading /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/dataset/lysozyme.pdb...
+Read 'LYSOZYME', 1079 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 1 chains and 1 blocks of water and 207 residues with 1079 atoms
+
+  chain  #res #atoms
+
+  1 'A'   129   1001  
+
+  2 ' '    78     78  (only water)
+
+there were 0 atoms with zero occupancy and 74 atoms with          occupancy unequal to one (out of 1079 atoms). Check your pdb file.
+
+Reading residue database... (Oplsaa)
+
+Preserving residues names by default
+
+Processing chain 1 'A' (1001 atoms, 129 residues)
+
+Identified residue LYS1 as a starting terminus.
+
+Identified residue LEU129 as a ending terminus.
+Start terminus LYS-1: NH3+
+End terminus LEU-129: COO-
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 129 residues with 1960 atoms
+
+Making bonds...
+
+Number of bonds was 1984, now 1984
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are 5187 dihedrals,  426 impropers, 3547 angles
+          5106 pairs,     1984 bonds and     0 virtual sites
+
+Total mass 14313.193 a.m.u.
+
+Total charge 8.000 e
+
+Writing topology
+
+Processing chain 2 (78 atoms, 78 residues)
+
+Problem with chain definition, or missing terminal residues. This chain does not appear to contain a recognized chain molecule. If this is incorrect, you can edit residuetypes.dat to modify the behavior.
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 78 residues with 234 atoms
+
+Making bonds...
+
+Number of bonds was 156, now 156
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are    0 dihedrals,    0 impropers,   78 angles
+             0 pairs,      156 bonds and     0 virtual sites
+
+Total mass 1405.201 a.m.u.
+
+Total charge 0.000 e
+
+Including chain 1 in system: 1960 atoms 129 residues
+
+Including chain 2 in system: 234 atoms 78 residues
+
+Now there are 2194 atoms and 207 residues
+
+Total mass in system 15718.394 a.m.u.
+
+Total charge in system 8.000 e
+
+Writing coordinate file...
+
+		--------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/dataset/lysozyme.pdb.
+
+The Oplsaa force field and the spce water model are used.
+
+		--------- ETON ESAELP ------------
+Using the Oplsaa force field in directory oplsaa.ff
+
+going to rename oplsaa.ff/aminoacids.r2b
+Reading /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/dataset/1AKI.pdb...
+Read 'LYSOZYME', 1079 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 1 chains and 1 blocks of water and 207 residues with 1079 atoms
+
+  chain  #res #atoms
+
+  1 'A'   129   1001  
+
+  2 ' '    78     78  (only water)
+
+there were 0 atoms with zero occupancy and 74 atoms with          occupancy unequal to one (out of 1079 atoms). Check your pdb file.
+
+Reading residue database... (Oplsaa)
+
+Preserving residues names by default
+
+Processing chain 1 'A' (1001 atoms, 129 residues)
+
+Identified residue LYS1 as a starting terminus.
+
+Identified residue LEU129 as a ending terminus.
+Start terminus LYS-1: NH3+
+End terminus LEU-129: COO-
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 129 residues with 1960 atoms
+
+Making bonds...
+
+Number of bonds was 1984, now 1984
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are 5187 dihedrals,  426 impropers, 3547 angles
+          5106 pairs,     1984 bonds and     0 virtual sites
+
+Total mass 14313.193 a.m.u.
+
+Total charge 8.000 e
+
+Writing topology
+
+Processing chain 2 (78 atoms, 78 residues)
+
+Problem with chain definition, or missing terminal residues. This chain does not appear to contain a recognized chain molecule. If this is incorrect, you can edit residuetypes.dat to modify the behavior.
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 78 residues with 234 atoms
+
+Making bonds...
+
+Number of bonds was 156, now 156
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are    0 dihedrals,    0 impropers,   78 angles
+             0 pairs,      156 bonds and     0 virtual sites
+
+Total mass 1405.201 a.m.u.
+
+Total charge 0.000 e
+
+Including chain 1 in system: 1960 atoms 129 residues
+
+Including chain 2 in system: 234 atoms 78 residues
+
+Now there are 2194 atoms and 207 residues
+
+Total mass in system 15718.394 a.m.u.
+
+Total charge in system 8.000 e
+
+Writing coordinate file...
+
+		--------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/dataset/1AKI.pdb.
+
+The Oplsaa force field and the spce water model are used.
+
+		--------- ETON ESAELP ------------

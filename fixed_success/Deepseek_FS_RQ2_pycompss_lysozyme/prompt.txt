@@ -1,0 +1,113 @@
+Escreva um script em Python utilizando o framework PyCOMPSs para gerar workflows responsáveis por calcular os algoritmos KMeans, Matmul e Lysozyme separadamente. A aplicação Lysozyme precisa do gmx e gmx_mpi do GROMACS com a topologia pdb2gmx. A seguir um exemplo de um workflow de wordcount que deve servir como referência.
+
+import os
+import time
+import argparse
+from pprint import pprint
+
+from pycompss.api.task import task
+from pycompss.api.api import compss_wait_on
+
+
+@task(returns=list)
+def read_file(file_path):
+    """Read a file and return a list of words."""
+    data = []
+    with open(file_path, 'r') as f:
+        for line in f:
+            data += line.split()
+    return data
+
+
+@task(returns=dict)
+def wordCount(data):
+    """Construct a frequency word dictionary from a list of words."""
+    partial_result = {}
+    for entry in data:
+        if entry in partial_result:
+            partial_result[entry] += 1
+        else:
+            partial_result[entry] = 1
+    return partial_result
+
+
+@task(returns=dict, priority=True)
+def merge_two_dicts(dic1, dic2):
+    """Update a dictionary with another dictionary."""
+    for k in dic2:
+        if k in dic1:
+            dic1[k] += dic2[k]
+        else:
+            dic1[k] = dic2[k]
+    return dic1
+
+
+def ensure_sample_dataset(path):
+    """Create a small sample dataset if `path` is missing or empty, so the
+    script is runnable standalone without the notebook's original
+    pre-bundled dataset/ directory."""
+    if os.path.isdir(path) and os.listdir(path):
+        return
+    os.makedirs(path, exist_ok=True)
+    samples = {
+        "file1.txt": "the quick brown fox jumps over the lazy dog\n"
+                     "the dog barks at the fox\n",
+        "file2.txt": "pycompss makes parallel programming easy\n"
+                     "parallel tasks run on distributed workers\n",
+        "file3.txt": "wordcount is a classic distributed computing example\n"
+                     "the wordcount example counts word frequency\n",
+    }
+    for name, content in samples.items():
+        with open(os.path.join(path, name), "w") as f:
+            f.write(content)
+    print("No dataset found at {}; generated a small sample dataset instead.".format(path))
+
+
+def main(dataset):
+    start_time = time.time()
+
+    ensure_sample_dataset(dataset)
+
+    partial_result = []
+    for file_name in os.listdir(dataset):
+        file_path = os.path.join(dataset, file_name)
+        data = read_file(file_path)
+        partial_result.append(wordCount(data))
+
+    result = {}
+    for partial in partial_result:
+        result = merge_two_dicts(result, partial)
+
+    result = compss_wait_on(result)
+
+    total_time = time.time() - start_time
+
+    print("Result:")
+    pprint(result)
+    print("Words: {}".format(sum(result.values())))
+    print("Total time: %f" % total_time)
+
+
+def parse_args():
+    """
+    Arguments parser.
+    :return: Parsed arguments.
+    """
+    description = 'PyCOMPSs wordcount implementation (terminal version)'
+    parser = argparse.ArgumentParser(description=description)
+    parser.add_argument(
+        '-d', '--dataset', type=str,
+        default=os.path.join(os.getcwd(), 'dataset'),
+        help='Directory of text files to count words in '
+             '(default: ./dataset under the current working directory; '
+             'auto-generated with sample files if missing). Note: under '
+             'runcompss, __file__ does not reliably point at this script\'s '
+             'location, so the default is cwd-relative, same as the '
+             'original notebook (os.getcwd() + "/dataset").'
+    )
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    opts = parse_args()
+    main(opts.dataset)

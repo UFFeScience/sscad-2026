@@ -1,0 +1,70 @@
+--> executable follows <--
+gmx solvate -cp /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_newbox.gro -cs spc216.gro -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top
+--> end executable <--
+                 :-) GROMACS - gmx solvate, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx solvate -cp /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_newbox.gro -cs spc216.gro -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top
+
+Reading solute configuration
+Reading solvent configuration
+
+Initialising inter-atomic distances...
+Generating solvent configuration
+Will generate new solvent configuration of 4x4x4 boxes
+Solvent box contains 41472 atoms in 13824 residues
+Removed 3204 solvent atoms due to solvent-solvent overlap
+Removed 2070 solvent atoms due to solute-solvent overlap
+Sorting configuration
+Found 1 molecule type:
+    SOL (   3 atoms): 12066 residues
+Generated solvent containing 36198 atoms in 12066 residues
+Writing generated configuration to /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv.gro
+
+Output configuration contains 38392 atoms in 12273 residues
+Volume                 :     395.326 (nm^3)
+Density                :     983.101 (g/l)
+Number of solvent molecules:  12066   
+
+Processing topology
+
+GROMACS reminds you: "Youth is wasted on the young" (The Smashing Pumpkins)
+
+--> executable follows <--
+gmx solvate -cp /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_newbox.gro -cs spc216.gro -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top
+--> end executable <--
+                 :-) GROMACS - gmx solvate, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx solvate -cp /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_newbox.gro -cs spc216.gro -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top
+
+Reading solute configuration
+Reading solvent configuration
+
+Initialising inter-atomic distances...
+Generating solvent configuration
+Will generate new solvent configuration of 4x4x4 boxes
+Solvent box contains 41472 atoms in 13824 residues
+Removed 3204 solvent atoms due to solvent-solvent overlap
+Removed 2070 solvent atoms due to solute-solvent overlap
+Sorting configuration
+Found 1 molecule type:
+    SOL (   3 atoms): 12066 residues
+Generated solvent containing 36198 atoms in 12066 residues
+Writing generated configuration to /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv.gro
+
+Output configuration contains 38392 atoms in 12273 residues
+Volume                 :     395.326 (nm^3)
+Density                :     983.101 (g/l)
+Number of solvent molecules:  12066   
+
+Processing topology
+
+GROMACS reminds you: "A programmer's spouse says 'While you're at the grocery store, buy some eggs.' The programmer never comes back." (Anonymous)
+

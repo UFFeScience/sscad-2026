@@ -1,0 +1,84 @@
+--> executable follows <--
+gmx genion -s /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_ions.tpr -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top -pname NA -nname CL -neutral < /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/genion.group
+--> end executable <--
+                 :-) GROMACS - gmx genion, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx genion -s /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_ions.tpr -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme.top -pname NA -nname CL -neutral
+
+Reading file /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_ions.tpr, VERSION 2026.3-Homebrew (single precision)
+Reading file /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/lysozyme_ions.tpr, VERSION 2026.3-Homebrew (single precision)
+Group     0 (         System) has 38392 elements
+Group     1 (        Protein) has  1960 elements
+Group     2 (      Protein-H) has  1001 elements
+Group     3 (        C-alpha) has   129 elements
+Group     4 (       Backbone) has   387 elements
+Group     5 (      MainChain) has   517 elements
+Group     6 (   MainChain+Cb) has   634 elements
+Group     7 (    MainChain+H) has   646 elements
+Group     8 (      SideChain) has  1314 elements
+Group     9 (    SideChain-H) has   484 elements
+Group    10 (    Prot-Masses) has  1960 elements
+Group    11 (    non-Protein) has 36432 elements
+Group    12 (          Water) has 36432 elements
+Group    13 (            SOL) has 36432 elements
+Group    14 (      non-Water) has  1960 elements
+Select a group: Number of (3-atomic) solvent molecules: 12144
+Using random seed -1220559361.
+Replacing solvent molecule 10920 (atom 34720) with CL
+Replacing solvent molecule 5849 (atom 19507) with CL
+Replacing solvent molecule 9065 (atom 29155) with CL
+Replacing solvent molecule 1148 (atom 5404) with CL
+Replacing solvent molecule 9248 (atom 29704) with CL
+Replacing solvent molecule 12113 (atom 38299) with CL
+Replacing solvent molecule 1920 (atom 7720) with CL
+Replacing solvent molecule 9334 (atom 29962) with CL
+
+
+GROMACS reminds you: "Youth is wasted on the young" (The Smashing Pumpkins)
+
+--> executable follows <--
+gmx genion -s /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_ions.tpr -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top -pname NA -nname CL -neutral < /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/config/genion.group
+--> end executable <--
+                 :-) GROMACS - gmx genion, 2026.3-Homebrew (-:
+
+Executable:   /opt/homebrew/bin/../Cellar/gromacs/2026.3/bin/gmx
+Data prefix:  /opt/homebrew/bin/../Cellar/gromacs/2026.3
+Working dir:  /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3
+Command line:
+  gmx genion -s /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_ions.tpr -o /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_solv_ions.gro -p /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI.top -pname NA -nname CL -neutral
+
+Reading file /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_ions.tpr, VERSION 2026.3-Homebrew (single precision)
+Reading file /Users/plwms/Documents/dissertacao/.rerun_simple_run2to5_sandbox/testes_RQ7_Deepseek_C-EXEMPLOS_run_3_parsl-lysozyme.py-lysozyme-3/output/1AKI_ions.tpr, VERSION 2026.3-Homebrew (single precision)
+Group     0 (         System) has 38392 elements
+Group     1 (        Protein) has  1960 elements
+Group     2 (      Protein-H) has  1001 elements
+Group     3 (        C-alpha) has   129 elements
+Group     4 (       Backbone) has   387 elements
+Group     5 (      MainChain) has   517 elements
+Group     6 (   MainChain+Cb) has   634 elements
+Group     7 (    MainChain+H) has   646 elements
+Group     8 (      SideChain) has  1314 elements
+Group     9 (    SideChain-H) has   484 elements
+Group    10 (    Prot-Masses) has  1960 elements
+Group    11 (    non-Protein) has 36432 elements
+Group    12 (          Water) has 36432 elements
+Group    13 (            SOL) has 36432 elements
+Group    14 (      non-Water) has  1960 elements
+Select a group: Number of (3-atomic) solvent molecules: 12144
+Using random seed -1075527745.
+Replacing solvent molecule 9176 (atom 29488) with CL
+Replacing solvent molecule 2712 (atom 10096) with CL
+Replacing solvent molecule 5492 (atom 18436) with CL
+Replacing solvent molecule 4800 (atom 16360) with CL
+Replacing solvent molecule 10938 (atom 34774) with CL
+Replacing solvent molecule 9906 (atom 31678) with CL
+Replacing solvent molecule 9571 (atom 30673) with CL
+Replacing solvent molecule 4331 (atom 14953) with CL
+
+
+GROMACS reminds you: "Hey, it's me - Pandora. Welcome to my new unboxing video!" (Anonymous)
+

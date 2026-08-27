@@ -1,0 +1,86 @@
+Setting the LD random seed to 2143070119
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+Analysing residue names:
+There are:   129    Protein residues
+There are: 12144      Water residues
+Analysing Protein...
+
+This run will generate roughly 3 Mb of data
+Setting the LD random seed to -1143865348
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 1 bonded neighbours molecule type 'CL'
+Analysing residue names:
+There are:   129    Protein residues
+There are: 12136      Water residues
+There are:     8        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.443 nm between atom 1156 and 1405
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x64, spacing 0.115 0.115 0.115
+
+Estimate for the relative computational load of the PME mesh part: 0.23
+
+This run will generate roughly 3 Mb of data
+Setting the LD random seed to 2012067534
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+Analysing residue names:
+There are:   129    Protein residues
+There are: 12144      Water residues
+Analysing Protein...
+
+This run will generate roughly 3 Mb of data
+Setting the LD random seed to -407118082
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 1 bonded neighbours molecule type 'CL'
+Analysing residue names:
+There are:   129    Protein residues
+There are: 12136      Water residues
+There are:     8        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.443 nm between atom 1156 and 1405
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 64x64x64, spacing 0.115 0.115 0.115
+
+Estimate for the relative computational load of the PME mesh part: 0.23
+
+This run will generate roughly 3 Mb of data
