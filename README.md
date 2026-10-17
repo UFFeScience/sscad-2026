@@ -53,3 +53,58 @@ A coluna `run` registra **qual das 5 execuções (runs) produziu o script que fu
 foi enviado (`N/A` para células de referência). Ela é extraída do caminho original do
 script de entrada e conferida contra `analises/analises_workflows_completo.csv`: todo
 valor corresponde a uma run cujo `Funcionou?` é 1.
+
+## Oráculos de corretude (K-Means e MatMul)
+
+Executar até o fim não garante que o workflow calcule o resultado certo. A pasta
+`oracle/` contém os oráculos aplicados a **todas as 248 especificações de K-Means e
+MatMul que executaram** (ER ou ER+), e o veredito de cada uma. Lysozyme não foi
+avaliado por oráculo.
+
+**Critérios** (fixados antes de olhar os resultados, validados nos controles abaixo):
+
+- **MatMul** — `‖C − A·B‖_F ≤ ε·‖A‖_F·‖B‖_F`, com ε = 1e-6 (1e-3 em precisão simples),
+  usando os operandos que o próprio workflow usou. Quando as matrizes completas nunca
+  existem num mesmo processo (execução em blocos), a grade de blocos é reconstruída a
+  partir do fluxo de dados das tarefas, e todo bloco de entrada precisa participar do
+  produto verificado.
+- **K-Means** — os centróides finais são finitos, estão dentro do intervalo dos dados e
+  são uma atualização exata de Lloyd (atribuição ao centróide mais próximo + média por
+  cluster) dos centróides anteriores sobre **todo** o conjunto de entrada (erro relativo
+  ≤ 1e-6), ou uma solução convergida de Lloyd (mais um passo reduz a inércia em no
+  máximo 1e-4).
+
+**Como os valores foram obtidos.** Cada especificação foi reexecutada com um profiler
+leve (`capture/oracle_capture_hook.py`) que registra, sem alterar o cálculo, as matrizes
+mantidas pelas funções do próprio workflow em todos os processos (driver, workers do
+Parsl/PyCOMPSs e tarefas do Nextflow). Os 46 casos que a verificação automática não
+conseguiu decidir (p.ex. operandos gerados dentro das tarefas e nunca armazenados) foram
+decididos executando o código da própria especificação e comparando a saída com `A·B`
+ou com a iteração de Lloyd a partir da mesma inicialização (`manual_checks/`).
+
+**Controles.** As 6 implementações de referência (K-Means e MatMul × 3 sistemas) passam;
+6 variantes propositalmente erradas das referências Parsl (`run_mutants.py`: B
+transposto, pareamento de blocos errado, acumulação perdida, atribuição ao centróide mais
+distante, média errada, centróides nunca atualizados) executam sem erro e são todas
+rejeitadas.
+
+**Resultado.** 223 passam e **25 falham**: 14 são placeholders que só imprimem uma
+mensagem ou reportam números aleatórios, 8 têm defeitos algorítmicos e 3 não executam
+como foram gerados. O motivo de cada falha está em `final_verdicts.csv`; o efeito em ER
+e ER+ por célula das Tabelas 2 e 3 do artigo está em `table_impact.csv`.
+
+| Arquivo | Conteúdo |
+|---|---|
+| `final_verdicts.csv` | Veredito por especificação (`PASS`/`FAIL`), se foi automático ou manual, e o motivo |
+| `table_impact.csv` | ER e ER+ antes e depois dos oráculos, por tarefa × sistema × modelo × prompt |
+| `manifest.csv` | Arquivo exato que executou com sucesso em cada caso (gerado ou corrigido) |
+| `oracle.py` | Implementação dos oráculos |
+| `run_oracle_exec.py` | Reexecução com o profiler (reusa a lógica de invocação do harness original) |
+| `run_reference_exec.py`, `run_mutants.py` | Controles: referências e variantes erradas |
+| `build_manifest.py`, `final_verdicts.py` | Montagem do manifesto e dos vereditos finais |
+| `capture/` | Profiler carregado em todos os processos Python do workflow |
+| `manual_checks/` | Scripts das verificações diretas dos casos decididos manualmente |
+
+Os scripts foram executados a partir do repositório completo do estudo
+(`sscad/testes/automation/oracle/`) e usam seus caminhos; aqui estão publicados para
+auditoria.

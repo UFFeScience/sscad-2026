@@ -1,0 +1,249 @@
+id,tema,model,prompt,framework,algorithm,run,fonte,verdict,how,reason
+RQ2_GPT_FS_parsl_kmeans_run1,RQ2,GPT,FS,parsl,kmeans,1,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_matmul_run1,RQ2,GPT,FS,parsl,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_kmeans_run1,RQ2,GPT,FS,pycompss,kmeans,1,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_matmul_run1,RQ2,GPT,FS,pycompss,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_nextflow_kmeans_run1,RQ2,GPT,FS,nextflow,kmeans,1,raw,PASS,manual,direct check: scikit-learn centres are an exact Lloyd fixed point on the input file
+RQ2_GPT_FS_nextflow_matmul_run1,RQ2,GPT,FS,nextflow,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_nextflow_kmeans_run1,RQ2,Deepseek,FS,nextflow,kmeans,1,raw,PASS,manual,direct check: scikit-learn centres are an exact Lloyd fixed point on the input file
+RQ2_Deepseek_FS_nextflow_matmul_run1,RQ2,Deepseek,FS,nextflow,matmul,1,raw,FAIL,manual,"not executable as generated: declared output A.csv, writes matrix_a.csv"
+RQ2_Deepseek_FS_parsl_kmeans_run1,RQ2,Deepseek,FS,parsl,kmeans,1,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_parsl_matmul_run1,RQ2,Deepseek,FS,parsl,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_pycompss_kmeans_run1,RQ2,Deepseek,FS,pycompss,kmeans,1,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_pycompss_matmul_run1,RQ2,Deepseek,FS,pycompss,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_Command_FS_parsl_kmeans_run1,RQ2,Command,FS,parsl,kmeans,1,rerun,PASS,automatic,automatic oracle
+RQ2_Command_FS_parsl_matmul_run1,RQ2,Command,FS,parsl,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ2_Command_FS_pycompss_kmeans_run1,RQ2,Command,FS,pycompss,kmeans,1,raw,PASS,automatic,automatic oracle
+RQ2_Command_FS_pycompss_matmul_run1,RQ2,Command,FS,pycompss,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_nextflow_kmeans_run1,RQ2,Gemma,FS,nextflow,kmeans,1,raw,FAIL,manual,not executable as generated: script called by relative path from the work dir
+RQ2_Gemma_FS_nextflow_matmul_run1,RQ2,Gemma,FS,nextflow,matmul,1,raw,FAIL,manual,not executable as generated: script called by relative path from the work dir
+RQ2_Gemma_FS_parsl_kmeans_run1,RQ2,Gemma,FS,parsl,kmeans,1,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_parsl_matmul_run1,RQ2,Gemma,FS,parsl,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_pycompss_kmeans_run1,RQ2,Gemma,FS,pycompss,kmeans,1,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_pycompss_matmul_run1,RQ2,Gemma,FS,pycompss,matmul,1,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_kmeans_run1,RQ7,Deepseek,ZS,parsl,kmeans,1,rerun,PASS,manual,direct check: same parameters and centres as the verified reference
+RQ7_Deepseek_ZS_parsl_matmul_run1,RQ7,Deepseek,ZS,parsl,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_kmeans_run1,RQ7,GPT,ZS,parsl,kmeans,1,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_matmul_run1,RQ7,GPT,ZS,parsl,matmul,1,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_kmeans_run1,RQ7,Gemma,ZS,parsl,kmeans,1,rerun,PASS,manual,direct check: same parameters and centres as the verified reference
+RQ7_Gemma_ZS_parsl_matmul_run1,RQ7,Gemma,ZS,parsl,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_kmeans_run1,RQ7,GPT,FS,parsl,kmeans,1,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_matmul_run1,RQ7,GPT,FS,parsl,matmul,1,raw,FAIL,manual,partial products never accumulated (||C-AB|| = 0.78 ||A|| ||B||)
+RQ7_GPT_FS_nextflow_kmeans_run1,RQ7,GPT,FS,nextflow,kmeans,1,rerun,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_kmeans_run1,RQ7,Deepseek,FS,parsl,kmeans,1,rerun,PASS,manual,direct check: identical to Lloyd (1e-16)
+RQ7_Deepseek_FS_parsl_matmul_run1,RQ7,Deepseek,FS,parsl,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_matmul_run1,RQ7,Command,FS,parsl,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_parsl_matmul_run1,RQ7,Gemma,FS,parsl,matmul,1,raw,PASS,manual,direct check: ||C-AB|| = 5e-17 ||A|| ||B||
+RQ7_Gemma_FS_nextflow_matmul_run1,RQ7,Gemma,FS,nextflow,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_kmeans_run1,RQ2,GPT,ZS,parsl,kmeans,1,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_matmul_run1,RQ2,GPT,ZS,parsl,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_kmeans_run1,RQ2,GPT,ZS,pycompss,kmeans,1,raw,PASS,manual,direct check: identical to Lloyd from the same initialisation
+RQ2_GPT_ZS_pycompss_matmul_run1,RQ2,GPT,ZS,pycompss,matmul,1,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_kmeans_run1,RQ2,GPT,ZS,nextflow,kmeans,1,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_matmul_run1,RQ2,GPT,ZS,nextflow,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_kmeans_run1,RQ2,Deepseek,ZS,parsl,kmeans,1,rerun,PASS,manual,direct check: scikit-learn KMeans on the generated data
+RQ2_Deepseek_ZS_parsl_matmul_run1,RQ2,Deepseek,ZS,parsl,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_nextflow_kmeans_run1,RQ2,Gemma,ZS,nextflow,kmeans,1,rerun,PASS,manual,direct check: scikit-learn centres are an exact Lloyd fixed point on the input file
+RQ2_Gemma_ZS_nextflow_matmul_run1,RQ2,Gemma,ZS,nextflow,matmul,1,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_kmeans_run1,RQ2,Gemma,ZS,pycompss,kmeans,1,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_matmul_run1,RQ2,Gemma,ZS,pycompss,matmul,1,rerun,FAIL,manual,result never synchronised: np.vstack of unresolved futures
+RQ2_GPT_ZS_parsl_kmeans_run2,RQ2,GPT,ZS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_matmul_run2,RQ2,GPT,ZS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_kmeans_run2,RQ2,GPT,ZS,pycompss,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_matmul_run2,RQ2,GPT,ZS,pycompss,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_kmeans_run2,RQ2,GPT,ZS,nextflow,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_matmul_run2,RQ2,GPT,ZS,nextflow,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_kmeans_run2,RQ2,Deepseek,ZS,parsl,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_matmul_run2,RQ2,Deepseek,ZS,parsl,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_kmeans_run2,RQ2,Deepseek,ZS,pycompss,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_matmul_run2,RQ2,Deepseek,ZS,pycompss,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ2_Command_FS_nextflow_kmeans_run2,RQ2,Command,FS,nextflow,kmeans,2,rerun,PASS,manual,direct check: scikit-learn centres are an exact Lloyd fixed point on the input file
+RQ2_Command_FS_nextflow_matmul_run2,RQ2,Command,FS,nextflow,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ2_Command_FS_parsl_kmeans_run2,RQ2,Command,FS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ2_Command_FS_parsl_matmul_run2,RQ2,Command,FS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_nextflow_kmeans_run2,RQ2,Gemma,ZS,nextflow,kmeans,2,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_nextflow_matmul_run2,RQ2,Gemma,ZS,nextflow,matmul,2,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_parsl_kmeans_run2,RQ2,Gemma,ZS,parsl,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_parsl_matmul_run2,RQ2,Gemma,ZS,parsl,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_kmeans_run2,RQ2,Gemma,ZS,pycompss,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_matmul_run2,RQ2,Gemma,ZS,pycompss,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_kmeans_run2,RQ7,Deepseek,ZS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_matmul_run2,RQ7,Deepseek,ZS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_nextflow_kmeans_run2,RQ7,GPT,ZS,nextflow,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_nextflow_matmul_run2,RQ7,GPT,ZS,nextflow,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_kmeans_run2,RQ7,GPT,ZS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_matmul_run2,RQ7,GPT,ZS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_kmeans_run2,RQ7,Gemma,ZS,parsl,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_matmul_run2,RQ7,Gemma,ZS,parsl,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_nextflow_kmeans_run2,RQ7,GPT,FS,nextflow,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_nextflow_matmul_run2,RQ7,GPT,FS,nextflow,matmul,2,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_kmeans_run2,RQ7,GPT,FS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_matmul_run2,RQ7,GPT,FS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_kmeans_run2,RQ7,Deepseek,FS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_matmul_run2,RQ7,Deepseek,FS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_kmeans_run2,RQ7,Command,FS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_matmul_run2,RQ7,Command,FS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_parsl_kmeans_run2,RQ7,Gemma,FS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_parsl_matmul_run2,RQ7,Gemma,FS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_kmeans_run2,RQ2,GPT,FS,parsl,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_kmeans_run2,RQ2,GPT,FS,pycompss,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_matmul_run2,RQ2,GPT,FS,pycompss,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_nextflow_kmeans_run2,RQ2,Deepseek,FS,nextflow,kmeans,2,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_parsl_kmeans_run2,RQ2,Deepseek,FS,parsl,kmeans,2,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_parsl_matmul_run2,RQ2,Deepseek,FS,parsl,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_nextflow_kmeans_run2,RQ2,Gemma,FS,nextflow,kmeans,2,raw,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_FS_nextflow_matmul_run2,RQ2,Gemma,FS,nextflow,matmul,2,raw,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_FS_parsl_kmeans_run2,RQ2,Gemma,FS,parsl,kmeans,2,raw,FAIL,manual,simulation: sum of random numbers reported as a centroid
+RQ2_Gemma_FS_parsl_matmul_run2,RQ2,Gemma,FS,parsl,matmul,2,raw,FAIL,manual,simulation: sum of random products reported as a checksum
+RQ2_Gemma_FS_pycompss_kmeans_run2,RQ2,Gemma,FS,pycompss,kmeans,2,raw,PASS,manual,direct check: identical to Lloyd from the same initialisation
+RQ2_Gemma_FS_pycompss_matmul_run2,RQ2,Gemma,FS,pycompss,matmul,2,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_kmeans_run3,RQ2,GPT,ZS,parsl,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_matmul_run3,RQ2,GPT,ZS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_kmeans_run3,RQ2,GPT,ZS,pycompss,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_matmul_run3,RQ2,GPT,ZS,pycompss,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_kmeans_run3,RQ2,GPT,ZS,nextflow,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_matmul_run3,RQ2,GPT,ZS,nextflow,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_kmeans_run3,RQ2,Deepseek,ZS,parsl,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_matmul_run3,RQ2,Deepseek,ZS,parsl,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_kmeans_run3,RQ2,Deepseek,ZS,pycompss,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_matmul_run3,RQ2,Deepseek,ZS,pycompss,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ2_Command_FS_parsl_kmeans_run3,RQ2,Command,FS,parsl,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ2_Command_FS_pycompss_kmeans_run3,RQ2,Command,FS,pycompss,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_Command_FS_pycompss_matmul_run3,RQ2,Command,FS,pycompss,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_nextflow_kmeans_run3,RQ2,Gemma,ZS,nextflow,kmeans,3,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_nextflow_matmul_run3,RQ2,Gemma,ZS,nextflow,matmul,3,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_parsl_kmeans_run3,RQ2,Gemma,ZS,parsl,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_parsl_matmul_run3,RQ2,Gemma,ZS,parsl,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_kmeans_run3,RQ2,Gemma,ZS,pycompss,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_matmul_run3,RQ2,Gemma,ZS,pycompss,matmul,3,rerun,FAIL,manual,result never synchronised: np.vstack of unresolved futures
+RQ7_Deepseek_ZS_parsl_kmeans_run3,RQ7,Deepseek,ZS,parsl,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_matmul_run3,RQ7,Deepseek,ZS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_nextflow_kmeans_run3,RQ7,GPT,ZS,nextflow,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_nextflow_matmul_run3,RQ7,GPT,ZS,nextflow,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_kmeans_run3,RQ7,GPT,ZS,parsl,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_matmul_run3,RQ7,GPT,ZS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_kmeans_run3,RQ7,Gemma,ZS,parsl,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_matmul_run3,RQ7,Gemma,ZS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ7_GPT_FS_nextflow_kmeans_run3,RQ7,GPT,FS,nextflow,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_nextflow_matmul_run3,RQ7,GPT,FS,nextflow,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_kmeans_run3,RQ7,GPT,FS,parsl,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_matmul_run3,RQ7,GPT,FS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_kmeans_run3,RQ7,Deepseek,FS,parsl,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_matmul_run3,RQ7,Deepseek,FS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_kmeans_run3,RQ7,Command,FS,parsl,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_matmul_run3,RQ7,Command,FS,parsl,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_nextflow_matmul_run3,RQ7,Gemma,FS,nextflow,matmul,3,rerun,PASS,manual,direct check: result equals A.B exactly (1x1 grid)
+RQ7_Gemma_FS_parsl_kmeans_run3,RQ7,Gemma,FS,parsl,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_parsl_matmul_run3,RQ7,Gemma,FS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_kmeans_run3,RQ2,GPT,FS,parsl,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_matmul_run3,RQ2,GPT,FS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_kmeans_run3,RQ2,GPT,FS,pycompss,kmeans,3,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_matmul_run3,RQ2,GPT,FS,pycompss,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_nextflow_kmeans_run3,RQ2,Deepseek,FS,nextflow,kmeans,3,rerun,PASS,manual,direct check: scikit-learn centres are an exact Lloyd fixed point on the input file
+RQ2_Deepseek_FS_parsl_kmeans_run3,RQ2,Deepseek,FS,parsl,kmeans,3,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_parsl_matmul_run3,RQ2,Deepseek,FS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_pycompss_kmeans_run3,RQ2,Deepseek,FS,pycompss,kmeans,3,raw,FAIL,manual,chunk-local indices applied to the full dataset
+RQ2_Deepseek_FS_pycompss_matmul_run3,RQ2,Deepseek,FS,pycompss,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_parsl_kmeans_run3,RQ2,Gemma,FS,parsl,kmeans,3,raw,PASS,manual,direct check: scikit-learn KMeans per task (input partition ignored)
+RQ2_Gemma_FS_parsl_matmul_run3,RQ2,Gemma,FS,parsl,matmul,3,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_pycompss_kmeans_run3,RQ2,Gemma,FS,pycompss,kmeans,3,rerun,PASS,manual,direct check: identical to Lloyd from the same initialisation
+RQ2_Gemma_FS_pycompss_matmul_run3,RQ2,Gemma,FS,pycompss,matmul,3,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_kmeans_run4,RQ2,GPT,ZS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_matmul_run4,RQ2,GPT,ZS,parsl,matmul,4,rerun,PASS,manual,direct check: C.npy equals A.B with A regenerated from its seeds
+RQ2_GPT_ZS_pycompss_kmeans_run4,RQ2,GPT,ZS,pycompss,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_matmul_run4,RQ2,GPT,ZS,pycompss,matmul,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_kmeans_run4,RQ2,GPT,ZS,nextflow,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_matmul_run4,RQ2,GPT,ZS,nextflow,matmul,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_kmeans_run4,RQ2,GPT,FS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_matmul_run4,RQ2,GPT,FS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_kmeans_run4,RQ2,GPT,FS,pycompss,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_matmul_run4,RQ2,GPT,FS,pycompss,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_kmeans_run4,RQ7,GPT,ZS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_matmul_run4,RQ7,GPT,ZS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_nextflow_kmeans_run4,RQ7,GPT,ZS,nextflow,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_nextflow_matmul_run4,RQ7,GPT,ZS,nextflow,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_kmeans_run4,RQ7,GPT,FS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_matmul_run4,RQ7,GPT,FS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ7_GPT_FS_nextflow_kmeans_run4,RQ7,GPT,FS,nextflow,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_nextflow_matmul_run4,RQ7,GPT,FS,nextflow,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_nextflow_kmeans_run4,RQ2,Deepseek,ZS,nextflow,kmeans,4,rerun,PASS,manual,direct check: scikit-learn centres are an exact Lloyd fixed point on the input file
+RQ2_Deepseek_ZS_nextflow_matmul_run4,RQ2,Deepseek,ZS,nextflow,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_kmeans_run4,RQ2,Deepseek,ZS,parsl,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_matmul_run4,RQ2,Deepseek,ZS,parsl,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_kmeans_run4,RQ2,Deepseek,ZS,pycompss,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_matmul_run4,RQ2,Deepseek,ZS,pycompss,matmul,4,rerun,PASS,manual,"direct check: single np.dot task on rectangular A, B"
+RQ2_Deepseek_FS_parsl_kmeans_run4,RQ2,Deepseek,FS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_parsl_matmul_run4,RQ2,Deepseek,FS,parsl,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_kmeans_run4,RQ7,Deepseek,ZS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_matmul_run4,RQ7,Deepseek,ZS,parsl,matmul,4,raw,PASS,manual,direct check: ||C-AB|| = 3e-17 ||A|| ||B||
+RQ7_Deepseek_FS_parsl_kmeans_run4,RQ7,Deepseek,FS,parsl,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_matmul_run4,RQ7,Deepseek,FS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ2_Command_FS_nextflow_kmeans_run4,RQ2,Command,FS,nextflow,kmeans,4,rerun,PASS,manual,direct check: scikit-learn centres are an exact Lloyd fixed point on the input file
+RQ2_Command_FS_nextflow_matmul_run4,RQ2,Command,FS,nextflow,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ2_Command_FS_parsl_kmeans_run4,RQ2,Command,FS,parsl,kmeans,4,raw,FAIL,manual,integer centroid array truncates every mean
+RQ2_Command_FS_parsl_matmul_run4,RQ2,Command,FS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ7_Command_ZS_parsl_matmul_run4,RQ7,Command,ZS,parsl,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_kmeans_run4,RQ7,Command,FS,parsl,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_matmul_run4,RQ7,Command,FS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_nextflow_kmeans_run4,RQ2,Gemma,ZS,nextflow,kmeans,4,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_nextflow_matmul_run4,RQ2,Gemma,ZS,nextflow,matmul,4,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_parsl_kmeans_run4,RQ2,Gemma,ZS,parsl,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_parsl_matmul_run4,RQ2,Gemma,ZS,parsl,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_kmeans_run4,RQ2,Gemma,ZS,pycompss,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_matmul_run4,RQ2,Gemma,ZS,pycompss,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_parsl_kmeans_run4,RQ2,Gemma,FS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_parsl_matmul_run4,RQ2,Gemma,FS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_pycompss_kmeans_run4,RQ2,Gemma,FS,pycompss,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_pycompss_matmul_run4,RQ2,Gemma,FS,pycompss,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_kmeans_run4,RQ7,Gemma,ZS,parsl,kmeans,4,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_matmul_run4,RQ7,Gemma,ZS,parsl,matmul,4,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_nextflow_matmul_run4,RQ7,Gemma,FS,nextflow,matmul,4,raw,FAIL,manual,no process is executed (completed=0)
+RQ7_Gemma_FS_parsl_kmeans_run4,RQ7,Gemma,FS,parsl,kmeans,4,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_parsl_matmul_run4,RQ7,Gemma,FS,parsl,matmul,4,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_kmeans_run5,RQ2,GPT,ZS,parsl,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_parsl_matmul_run5,RQ2,GPT,ZS,parsl,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_kmeans_run5,RQ2,GPT,ZS,pycompss,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_pycompss_matmul_run5,RQ2,GPT,ZS,pycompss,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_kmeans_run5,RQ2,GPT,ZS,nextflow,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ2_GPT_ZS_nextflow_matmul_run5,RQ2,GPT,ZS,nextflow,matmul,5,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_kmeans_run5,RQ2,GPT,FS,parsl,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_parsl_matmul_run5,RQ2,GPT,FS,parsl,matmul,5,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_kmeans_run5,RQ2,GPT,FS,pycompss,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ2_GPT_FS_pycompss_matmul_run5,RQ2,GPT,FS,pycompss,matmul,5,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_parsl_kmeans_run5,RQ7,GPT,ZS,parsl,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ7_GPT_ZS_nextflow_kmeans_run5,RQ7,GPT,ZS,nextflow,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_kmeans_run5,RQ7,GPT,FS,parsl,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ7_GPT_FS_parsl_matmul_run5,RQ7,GPT,FS,parsl,matmul,5,raw,PASS,automatic,automatic oracle
+RQ7_GPT_FS_nextflow_kmeans_run5,RQ7,GPT,FS,nextflow,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_nextflow_kmeans_run5,RQ2,Deepseek,ZS,nextflow,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_kmeans_run5,RQ2,Deepseek,ZS,parsl,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_parsl_matmul_run5,RQ2,Deepseek,ZS,parsl,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_kmeans_run5,RQ2,Deepseek,ZS,pycompss,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_ZS_pycompss_matmul_run5,RQ2,Deepseek,ZS,pycompss,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_nextflow_kmeans_run5,RQ2,Deepseek,FS,nextflow,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_nextflow_matmul_run5,RQ2,Deepseek,FS,nextflow,matmul,5,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_parsl_kmeans_run5,RQ2,Deepseek,FS,parsl,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_parsl_matmul_run5,RQ2,Deepseek,FS,parsl,matmul,5,raw,PASS,automatic,automatic oracle
+RQ2_Deepseek_FS_pycompss_kmeans_run5,RQ2,Deepseek,FS,pycompss,kmeans,5,rerun,PASS,manual,direct check: exactly one Lloyd step over all points
+RQ2_Deepseek_FS_pycompss_matmul_run5,RQ2,Deepseek,FS,pycompss,matmul,5,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_kmeans_run5,RQ7,Deepseek,ZS,parsl,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_ZS_parsl_matmul_run5,RQ7,Deepseek,ZS,parsl,matmul,5,raw,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_nextflow_kmeans_run5,RQ7,Deepseek,FS,nextflow,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_kmeans_run5,RQ7,Deepseek,FS,parsl,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ7_Deepseek_FS_parsl_matmul_run5,RQ7,Deepseek,FS,parsl,matmul,5,raw,PASS,automatic,automatic oracle
+RQ7_Command_FS_parsl_kmeans_run5,RQ7,Command,FS,parsl,kmeans,5,raw,FAIL,manual,loop tests a Parsl Future (always true): no iteration runs
+RQ7_Command_FS_parsl_matmul_run5,RQ7,Command,FS,parsl,matmul,5,raw,FAIL,manual,multiply-add result discarded (PyCOMPSs INOUT semantics lost in Parsl)
+RQ2_Gemma_ZS_nextflow_kmeans_run5,RQ2,Gemma,ZS,nextflow,kmeans,5,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_nextflow_matmul_run5,RQ2,Gemma,ZS,nextflow,matmul,5,rerun,FAIL,manual,"placeholder: task only echoes text, nothing is computed"
+RQ2_Gemma_ZS_parsl_kmeans_run5,RQ2,Gemma,ZS,parsl,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_parsl_matmul_run5,RQ2,Gemma,ZS,parsl,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_kmeans_run5,RQ2,Gemma,ZS,pycompss,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_ZS_pycompss_matmul_run5,RQ2,Gemma,ZS,pycompss,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_parsl_kmeans_run5,RQ2,Gemma,FS,parsl,kmeans,5,raw,FAIL,manual,"simulation: returns random centroids, no data is read"
+RQ2_Gemma_FS_parsl_matmul_run5,RQ2,Gemma,FS,parsl,matmul,5,raw,PASS,automatic,automatic oracle
+RQ2_Gemma_FS_pycompss_kmeans_run5,RQ2,Gemma,FS,pycompss,kmeans,5,rerun,FAIL,manual,unweighted average of per-chunk means (6e-4 off a Lloyd step)
+RQ2_Gemma_FS_pycompss_matmul_run5,RQ2,Gemma,FS,pycompss,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_kmeans_run5,RQ7,Gemma,ZS,parsl,kmeans,5,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_ZS_parsl_matmul_run5,RQ7,Gemma,ZS,parsl,matmul,5,rerun,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_parsl_kmeans_run5,RQ7,Gemma,FS,parsl,kmeans,5,raw,PASS,automatic,automatic oracle
+RQ7_Gemma_FS_parsl_matmul_run5,RQ7,Gemma,FS,parsl,matmul,5,raw,PASS,automatic,automatic oracle
